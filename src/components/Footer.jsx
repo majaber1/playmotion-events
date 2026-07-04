@@ -1,29 +1,34 @@
 import { Link } from 'react-router-dom'
 
+// TODO: Replace the placeholder email, phone, and WhatsApp number below
+// with your real business contact details.
+const CONTACT = {
+  email: 'info@playmotion-events.com',
+  phone: '+966 50 000 0000',
+  whatsapp: 'https://wa.me/966500000000',
+}
+
 const footerLinks = {
   quickLinks: [
     { name: 'Home', path: '/' },
     { name: 'About Us', path: '/about' },
-    { name: 'Mission & Vision', path: '/mission-vision' },
-    { name: 'Products', path: '/products' },
+    { name: 'Products / Games', path: '/products' },
+    { name: 'Event Solutions', path: '/event-solutions' },
     { name: 'Gallery', path: '/gallery' },
-    { name: 'Contact', path: '/contact' },
+    { name: 'Videos', path: '/videos' },
+    { name: 'Reserve a Game', path: '/booking' },
+    { name: 'Contact Us', path: '/contact' },
   ],
-  categories: [
-    { name: 'Interactive Sports Games', path: '/categories' },
-    { name: 'Projection-Based Games', path: '/categories' },
-    { name: 'Sensor-Based Games', path: '/categories' },
-    { name: 'Kids Interactive Games', path: '/categories' },
-    { name: 'Corporate Team-Building', path: '/categories' },
-    { name: 'Carnival & Skill Games', path: '/categories' },
+  experiences: [
+    { name: 'MultiBall Experience', path: '/multiball' },
+    { name: 'X-Wall Experience', path: '/x-wall' },
+    { name: 'Soccer Table / Foosball', path: '/soccer-table' },
   ],
-  events: [
-    { name: 'Corporate Events', path: '/events' },
-    { name: 'Malls & Retail', path: '/events' },
-    { name: 'Schools & Universities', path: '/events' },
-    { name: 'Festivals & Exhibitions', path: '/events' },
-    { name: 'Private Celebrations', path: '/events' },
-    { name: 'Packages', path: '/packages' },
+  perfectFor: [
+    { name: 'Exhibitions', path: '/event-solutions' },
+    { name: 'Corporate Activations', path: '/event-solutions' },
+    { name: 'Mall Activations', path: '/event-solutions' },
+    { name: 'Schools & Entertainment Zones', path: '/event-solutions' },
   ],
 }
 
@@ -44,11 +49,12 @@ export default function Footer() {
               </div>
             </Link>
             <p className="text-gray-400 text-sm leading-relaxed mb-6">
-              Saudi Arabia's premier interactive game rental company for events, malls, festivals, schools, and corporate activations.
+              PlayMotion Events is an interactive gaming technology partner for exhibitions, corporate activations, malls, schools, and entertainment zones across Saudi Arabia and the GCC.
             </p>
             {/* Social Links */}
             <div className="flex gap-3">
-              {['Twitter', 'Instagram', 'LinkedIn', 'YouTube'].map((social) => (
+              {/* TODO: Replace "#" with your real social media page URLs */}
+              {['Instagram', 'LinkedIn', 'YouTube', 'X'].map((social) => (
                 <a
                   key={social}
                   href="#"
@@ -66,7 +72,7 @@ export default function Footer() {
             <h4 className="text-white font-bold mb-5 text-sm uppercase tracking-wider">Quick Links</h4>
             <ul className="space-y-2">
               {footerLinks.quickLinks.map((link) => (
-                <li key={link.path}>
+                <li key={link.name}>
                   <Link
                     to={link.path}
                     className="text-gray-400 hover:text-[#00d4ff] text-sm transition-colors flex items-center gap-2 group"
@@ -79,17 +85,31 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Categories */}
+          {/* Experiences + Perfect For */}
           <div>
-            <h4 className="text-white font-bold mb-5 text-sm uppercase tracking-wider">Categories</h4>
-            <ul className="space-y-2">
-              {footerLinks.categories.map((link) => (
+            <h4 className="text-white font-bold mb-5 text-sm uppercase tracking-wider">Our Experiences</h4>
+            <ul className="space-y-2 mb-8">
+              {footerLinks.experiences.map((link) => (
                 <li key={link.name}>
                   <Link
                     to={link.path}
                     className="text-gray-400 hover:text-[#00ff88] text-sm transition-colors flex items-center gap-2 group"
                   >
                     <span className="w-1 h-1 rounded-full bg-[#00ff88]/40 group-hover:bg-[#00ff88] transition-colors" />
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+            <h4 className="text-white font-bold mb-5 text-sm uppercase tracking-wider">Perfect For</h4>
+            <ul className="space-y-2">
+              {footerLinks.perfectFor.map((link) => (
+                <li key={link.name}>
+                  <Link
+                    to={link.path}
+                    className="text-gray-400 hover:text-[#ff6b00] text-sm transition-colors flex items-center gap-2 group"
+                  >
+                    <span className="w-1 h-1 rounded-full bg-[#ff6b00]/40 group-hover:bg-[#ff6b00] transition-colors" />
                     {link.name}
                   </Link>
                 </li>
@@ -103,20 +123,20 @@ export default function Footer() {
             <div className="space-y-4 mb-6">
               <div className="flex items-start gap-3">
                 <span className="text-[#00d4ff] mt-0.5">📍</span>
-                <p className="text-gray-400 text-sm">Riyadh, Saudi Arabia<br />Available Nationwide</p>
+                <p className="text-gray-400 text-sm">Riyadh, Saudi Arabia<br />Available across the GCC</p>
               </div>
               <div className="flex items-center gap-3">
                 <span className="text-[#00d4ff]">📞</span>
-                <a href="tel:+966500000000" className="text-gray-400 hover:text-white text-sm transition-colors">+966 50 000 0000</a>
+                <a href={`tel:${CONTACT.phone.replace(/\s/g, '')}`} className="text-gray-400 hover:text-white text-sm transition-colors">{CONTACT.phone}</a>
               </div>
               <div className="flex items-center gap-3">
                 <span className="text-[#00d4ff]">✉️</span>
-                <a href="mailto:info@playmotion.sa" className="text-gray-400 hover:text-white text-sm transition-colors">info@playmotion.sa</a>
+                <a href={`mailto:${CONTACT.email}`} className="text-gray-400 hover:text-white text-sm transition-colors">{CONTACT.email}</a>
               </div>
             </div>
             {/* WhatsApp */}
             <a
-              href="https://wa.me/966500000000"
+              href={CONTACT.whatsapp}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-[#25D366]/10 border border-[#25D366]/30 text-[#25D366] px-4 py-2 rounded-full text-sm font-medium hover:bg-[#25D366]/20 transition-all"
@@ -136,7 +156,7 @@ export default function Footer() {
             &copy; {new Date().getFullYear()} PlayMotion Events. All rights reserved.
           </p>
           <p className="text-gray-600 text-xs">
-            Interactive Game Rental Solutions — Saudi Arabia
+            Interactive Gaming Experiences for Events &amp; Exhibitions
           </p>
         </div>
       </div>
