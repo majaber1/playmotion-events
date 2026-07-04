@@ -4,12 +4,11 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 
 const navLinks = [
   { name: 'Home', path: '/' },
-  { name: 'About', path: '/about' },
+  { name: 'About Us', path: '/about' },
   { name: 'Products', path: '/products' },
-  { name: 'Categories', path: '/categories' },
+  { name: 'Event Solutions', path: '/event-solutions' },
   { name: 'Gallery', path: '/gallery' },
-  { name: 'Events', path: '/events' },
-  { name: 'Packages', path: '/packages' },
+  { name: 'Videos', path: '/videos' },
   { name: 'Contact', path: '/contact' },
 ]
 
@@ -67,10 +66,10 @@ export default function Navbar() {
           {/* CTA + Mobile */}
           <div className="flex items-center gap-3">
             <Link
-              to="/contact"
+              to="/booking"
               className="hidden md:block btn-primary text-sm py-2 px-5"
             >
-              Request Quote
+              Reserve a Game
             </Link>
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -101,8 +100,8 @@ export default function Navbar() {
                 {link.name}
               </NavLink>
             ))}
-            <Link to="/contact" className="block btn-primary text-center mt-4 text-sm py-3">
-              Request a Quote
+            <Link to="/booking" className="block btn-primary text-center mt-4 text-sm py-3">
+              Reserve a Game
             </Link>
           </div>
         </div>
