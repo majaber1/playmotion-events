@@ -1,113 +1,61 @@
-import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
+import SEO from '../components/SEO'
 import Hero from '../components/Hero'
-import CategoryCard from '../components/CategoryCard'
 import ProductCard from '../components/ProductCard'
 import GalleryGrid from '../components/GalleryGrid'
-import { categories, products, eventTypes } from '../data/products'
-
-const whyUs = [
-  { icon: '⚡', title: 'Fast Setup', desc: 'We arrive and set up everything — you focus on your event.' },
-  { icon: '🎯', title: 'All Ages', desc: 'Games designed for kids, teens, adults, and corporate professionals.' },
-  { icon: '🛡️', title: 'Safe & Certified', desc: 'All equipment is safe, durable, and event-ready.' },
-  { icon: '📍', title: 'Nationwide', desc: 'We serve events across all major cities in Saudi Arabia.' },
-  { icon: '🎨', title: 'Custom Branding', desc: 'Add your logo and brand colors to our game setups.' },
-  { icon: '🏆', title: 'Premium Experience', desc: '500+ successful events across KSA.' },
-]
+import { products, whyChooseUs, perfectFor, howItWorks } from '../data/products'
 
 export default function Home() {
-  const featuredProducts = products.filter(p => p.featured)
-
   return (
     <>
-      <Helmet>
-        <title>PlayMotion Events - Interactive Game Rentals in Saudi Arabia</title>
-        <meta name="description" content="PlayMotion Events provides interactive game rentals for events, malls, corporate events, schools, and festivals across Saudi Arabia. MultiBall Mini, reaction walls, and more." />
-      </Helmet>
-
-      {/* Hero */}
-      <Hero
-        badge="🎮 Saudi Arabia's Premier Interactive Game Rental"
-        title={<>Interactive Game Rentals for <span className="text-gradient">Unforgettable Events</span></>}
-        description="We bring projector-based, sensor-based, and challenge games to malls, corporate events, schools, festivals, and private occasions."
-        primaryCta={{ label: 'Explore Games', href: '/products' }}
-        secondaryCta={{ label: 'Request a Quote', href: '/contact' }}
+      <SEO
+        title="Interactive Gaming Experiences for Events & Exhibitions"
+        description="PlayMotion Events provides MultiBall, X-Wall, and Soccer Table interactive projector-based games for exhibitions, corporate events, malls, schools, and entertainment activations across Saudi Arabia and the GCC."
+        path="/"
       />
 
-      {/* Featured Product: MultiBall Mini */}
-      <section className="py-20 bg-gradient-to-br from-[#0d1221] to-[#0a0e1a]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <div className="section-subtitle">Featured Product</div>
-              <h2 className="section-title mb-6">MultiBall Mini <span className="text-gradient">Interactive Wall</span></h2>
-              <p className="text-gray-300 text-lg leading-relaxed mb-6">
-                Our flagship system — MultiBall Mini is a compact projector-based interactive sports and game experience. Players interact with projection-mapped balls and targets on walls or floors. Zero installation needed. Perfect for malls, corporate events, and entertainment activations.
-              </p>
-              <ul className="space-y-3 mb-8">
-                {['Multi-player sports & game modes', 'Projection on wall or floor', '30-minute setup time', 'Ages 5+ suitable'].map(f => (
-                  <li key={f} className="flex items-center gap-3 text-gray-300">
-                    <span className="text-[#00d4ff]">✓</span>{f}
-                  </li>
-                ))}
-              </ul>
-              <div className="flex gap-4">
-                <Link to="/products/1" className="btn-primary">Learn More</Link>
-                <Link to="/contact" className="btn-secondary">Request Quote</Link>
-              </div>
-            </div>
-            <div className="relative">
-              <img
-                src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45?w=700&q=80"
-                alt="MultiBall Mini Interactive Wall"
-                className="rounded-2xl w-full object-cover h-96 glow-blue"
-              />
-              <div className="absolute -top-4 -right-4 bg-[#ff6b00] text-white px-4 py-2 rounded-xl font-bold text-sm">
-                Most Popular
-              </div>
-            </div>
-          </div>
+      <Hero
+        badge="🎮 Interactive Gaming Technology Partner"
+        title={<>Make Your Booth <span className="text-gradient">the One People Stop At</span></>}
+        description="Interactive projector-based games for exhibitions, corporate events, malls, schools, and entertainment activations."
+        primaryCta={{ label: 'Reserve a Game', href: '/booking' }}
+        secondaryCta={{ label: 'View Experiences', href: '/products' }}
+      />
+
+      {/* Intro strip + third CTA */}
+      <section className="py-10 border-y border-white/5 bg-[#0d1221]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left">
+          <p className="text-gray-300 text-lg">
+            Transform Your Booth Into an Interactive Destination.
+          </p>
+          <Link to="/contact" className="btn-secondary whitespace-nowrap">Contact Us</Link>
         </div>
       </section>
 
-      {/* Categories */}
+      {/* 3 Main Products */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
-            <div className="section-subtitle">Game Categories</div>
-            <h2 className="section-title">Explore Our <span className="text-gradient">Interactive Experiences</span></h2>
+            <div className="section-subtitle">Our Experiences</div>
+            <h2 className="section-title">Interactive Games for <span className="text-gradient">Every Event</span></h2>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {categories.map(cat => <CategoryCard key={cat.id} category={cat} />)}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {products.map((p) => (
+              <ProductCard key={p.id} product={p} />
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Featured Products */}
+      {/* Why Event Organizers Choose Us */}
       <section className="py-20 bg-gradient-to-br from-[#0d1221] to-[#0a0e1a]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
-            <div className="section-subtitle">Top Games</div>
-            <h2 className="section-title">Featured <span className="text-gradient">Products</span></h2>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
-            {featuredProducts.map(p => <ProductCard key={p.id} product={p} />)}
-          </div>
-          <div className="text-center">
-            <Link to="/products" className="btn-primary text-lg py-4 px-12">View All Products</Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Why Choose Us */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-14">
-            <div className="section-subtitle">Why PlayMotion</div>
-            <h2 className="section-title">Why <span className="text-gradient">Choose Us</span></h2>
+            <div className="section-subtitle">Why Us</div>
+            <h2 className="section-title">Why Event Organizers <span className="text-gradient">Choose Us</span></h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {whyUs.map(item => (
+            {whyChooseUs.map((item) => (
               <div key={item.title} className="card-glass rounded-2xl p-6">
                 <div className="text-4xl mb-4">{item.icon}</div>
                 <h3 className="text-white font-bold text-lg mb-2">{item.title}</h3>
@@ -118,27 +66,41 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Event Types */}
+      {/* Perfect For */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-14">
+            <div className="section-subtitle">Where We Fit</div>
+            <h2 className="section-title">Perfect <span className="text-gradient">For</span></h2>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
+            {perfectFor.map((item) => (
+              <div key={item.id} className="card-glass rounded-2xl p-6 text-center">
+                <div className="text-3xl mb-3">{item.icon}</div>
+                <h3 className="text-white font-semibold text-sm">{item.name}</h3>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* How It Works */}
       <section className="py-20 bg-gradient-to-br from-[#0d1221] to-[#0a0e1a]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
-            <div className="section-subtitle">Events We Serve</div>
-            <h2 className="section-title">Perfect For <span className="text-gradient">Every Event</span></h2>
+            <div className="section-subtitle">Simple Process</div>
+            <h2 className="section-title">How It <span className="text-gradient">Works</span></h2>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-5">
-            {eventTypes.map(event => (
-              <Link key={event.id} to="/events" className="group relative rounded-2xl overflow-hidden h-48">
-                <img src={event.image} alt={event.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0a0e1a] via-[#0a0e1a]/40 to-transparent" />
-                <div className="absolute bottom-4 left-4">
-                  <div className="text-2xl mb-1">{event.icon}</div>
-                  <h3 className="text-white font-bold">{event.name}</h3>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {howItWorks.map((step) => (
+              <div key={step.step} className="card-glass rounded-2xl p-6 text-center">
+                <div className="w-10 h-10 mx-auto rounded-full bg-[#00d4ff] text-[#0a0e1a] font-black flex items-center justify-center mb-4">
+                  {step.step}
                 </div>
-              </Link>
+                <h3 className="text-white font-bold mb-2">{step.title}</h3>
+                <p className="text-gray-400 text-sm">{step.desc}</p>
+              </div>
             ))}
-          </div>
-          <div className="text-center mt-10">
-            <Link to="/events" className="btn-secondary text-lg py-4 px-12">All Event Types</Link>
           </div>
         </div>
       </section>
@@ -161,18 +123,11 @@ export default function Home() {
       <section className="py-24 bg-gradient-to-br from-[#0d1221] to-[#0a0e1a]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="section-subtitle">Get Started</div>
-          <h2 className="section-title mb-6">Ready to Make Your <span className="text-gradient">Event Unforgettable?</span></h2>
-          <p className="text-gray-300 text-lg mb-10">Contact us today for a custom quote tailored to your event type and budget.</p>
+          <h2 className="section-title mb-6">Make Your Next Event <span className="text-gradient">Unforgettable</span></h2>
+          <p className="text-gray-300 text-lg mb-10">Contact us today to reserve MultiBall, X-Wall, Soccer Table, or a full interactive package.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/contact" className="btn-primary text-lg py-4 px-12">Request a Quote</Link>
-            <a
-              href="https://wa.me/966500000000"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 bg-[#25D366]/10 border border-[#25D366]/30 text-[#25D366] py-4 px-12 rounded-full font-bold hover:bg-[#25D366]/20 transition-all text-lg"
-            >
-              WhatsApp Us
-            </a>
+            <Link to="/booking" className="btn-primary text-lg py-4 px-12">Reserve a Game</Link>
+            <Link to="/contact" className="btn-secondary text-lg py-4 px-12">Contact Us</Link>
           </div>
         </div>
       </section>
