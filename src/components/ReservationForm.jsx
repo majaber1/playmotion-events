@@ -4,7 +4,7 @@ const eventTypes = [
   'Exhibition', 'Corporate Activation', 'Conference', 'Mall Activation',
   'School Event', 'Sports Day', 'Entertainment Zone', 'Private Event', 'Other',
 ]
-const games = ['MultiBall', 'X-Wall', 'Soccer Table', 'Full Package']
+const games = ['MultiBall', 'X-Wall', 'Soccer Table', 'AR/VR Experience', 'Hologram Display', 'AI Photo Booth', 'Gamification Zone', 'Full Package']
 
 export default function ReservationForm({ defaultGame = '' }) {
   const [form, setForm] = useState({
