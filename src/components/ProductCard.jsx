@@ -4,10 +4,14 @@ const colorMap = {
   blue: { text: 'text-[#00d4ff]', bg: 'bg-[#00d4ff]/20', border: 'border-[#00d4ff]/40' },
   green: { text: 'text-[#00ff88]', bg: 'bg-[#00ff88]/20', border: 'border-[#00ff88]/40' },
   orange: { text: 'text-[#ff6b00]', bg: 'bg-[#ff6b00]/20', border: 'border-[#ff6b00]/40' },
+  purple: { text: 'text-[#a855f7]', bg: 'bg-[#a855f7]/20', border: 'border-[#a855f7]/40' },
+  pink: { text: 'text-[#ec4899]', bg: 'bg-[#ec4899]/20', border: 'border-[#ec4899]/40' },
+  cyan: { text: 'text-[#22d3ee]', bg: 'bg-[#22d3ee]/20', border: 'border-[#22d3ee]/40' },
+  yellow: { text: 'text-[#eab308]', bg: 'bg-[#eab308]/20', border: 'border-[#eab308]/40' },
 }
 
 export default function ProductCard({ product }) {
-  const { slug, name, tagline, image, shortDescription, bestFor, spaceRequirement, setupTime, players, color = 'blue' } = product
+  const { slug, name, tagline, image, shortDescription, bestFor, spaceRequirement, setupTime, players, color = 'blue', detailPath } = product
   const c = colorMap[color] || colorMap.blue
 
   return (
@@ -43,7 +47,7 @@ export default function ProductCard({ product }) {
           </div>
         </div>
         <div className="flex gap-2">
-          <Link to={`/${slug}`} className="flex-1 text-center bg-white/5 border border-white/10 text-gray-300 hover:text-white hover:border-white/30 text-sm py-2.5 rounded-xl transition-all">
+                  <Link to={detailPath || `/${slug}`} className="flex-1 text-center bg-white/5 border border-white/10 text-gray-300 hover:text-white hover:border-white/30 text-sm py-2.5 rounded-xl transition-all">
             View Details
           </Link>
           <Link to={`/booking?game=${slug}`} className="flex-1 text-center bg-[#00d4ff]/10 border border-[#00d4ff]/30 text-[#00d4ff] hover:bg-[#00d4ff] hover:text-[#0a0e1a] text-sm py-2.5 rounded-xl transition-all font-semibold">
