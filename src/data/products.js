@@ -137,7 +137,7 @@ export const videos = [
     title: 'MultiBall Demo Video',
     category: 'MultiBall',
     description: 'See MultiBall in action - projection-based sports games for events and exhibitions.',
-    embedId: '', // TODO: paste a MultiBall YouTube video ID here, e.g. "dQw4w9WgXcQ"
+      embedId: 'WznovG2Yylw', // MultiBall 2026: The Next Generation of Interactive Sports (official MultiBall YouTube channel)
     officialUrl: 'https://www.youtube.com/@MultiBall',
     officialLabel: 'Watch on the official MultiBall YouTube channel',
   },
@@ -146,7 +146,7 @@ export const videos = [
     title: 'X-Wall Demo Video',
     category: 'X-Wall',
     description: 'A walkthrough of the portable X-Wall interactive game system.',
-    embedId: '', // TODO: paste an X-Wall YouTube video ID here
+      embedId: 'aMkHnW3W8tU', // X-Wall Portable in care: movement through play (official Interactive X-Wall YouTube channel)
     officialUrl: 'https://xwall.io/en/xwall-event',
     officialLabel: 'View X-Wall event examples',
   },
