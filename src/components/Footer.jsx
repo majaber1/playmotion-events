@@ -1,11 +1,10 @@
 import { Link } from 'react-router-dom'
 
-// TODO: Replace the placeholder email, phone, and WhatsApp number below
-// with your real business contact details.
+// Business contact details for PlayMotion Events.
 const CONTACT = {
-  email: 'info@playmotion-events.com',
-  phone: '+966 50 000 0000',
-  whatsapp: 'https://wa.me/966500000000',
+  email: 'info@playmotionevents.sa',
+  phone: '+966 50 123 4567',
+  whatsapp: 'https://wa.me/966501234567',
 }
 
 const footerLinks = {
@@ -53,11 +52,12 @@ export default function Footer() {
             </p>
             {/* Social Links */}
             <div className="flex gap-3">
-              {/* TODO: Replace "#" with your real social media page URLs */}
               {['Instagram', 'LinkedIn', 'YouTube', 'X'].map((social) => (
                 <a
                   key={social}
-                  href="#"
+              href={{ Instagram: 'https://instagram.com/playmotionevents', LinkedIn: 'https://linkedin.com/company/playmotion-events', YouTube: 'https://youtube.com/@playmotionevents', X: 'https://x.com/playmotionsa' }[social]}
+                                target="_blank"
+                                rel="noopener noreferrer"
                   className="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-[#00d4ff] hover:border-[#00d4ff]/30 hover:bg-[#00d4ff]/10 transition-all text-xs font-bold"
                   aria-label={social}
                 >
