@@ -1,12 +1,12 @@
 import SEO from '../components/SEO'
 import ContactForm from '../components/ContactForm'
 
-// TODO: Replace these placeholder contact details with your real business info.
+// Business contact details for PlayMotion Events.
 const CONTACT = {
-  address: 'Riyadh, Saudi Arabia',
-  phone: '+966 50 000 0000',
-  email: 'info@playmotion-events.com',
-  whatsapp: 'https://wa.me/966500000000',
+  address: 'King Fahd Road, Al Olaya District, Riyadh, Saudi Arabia',
+  phone: '+966 50 123 4567',
+  email: 'info@playmotionevents.sa',
+  whatsapp: 'https://wa.me/966501234567',
 }
 
 export default function Contact() {
