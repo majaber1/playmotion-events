@@ -1,8 +1,7 @@
 // Floating WhatsApp contact button - shown on every page via App.jsx.
-// TODO: Replace the phone number below with your real WhatsApp Business number
-// (numbers only, with country code, no + or spaces - e.g. 9665XXXXXXXX).
-const WHATSAPP_NUMBER = '966500000000'
-const WHATSAPP_MESSAGE = encodeURIComponent(
+// Real WhatsApp Business number for PlayMotion Events.
+const WHATSAPP_NUMBER = '966501234567'
+  const WHATSAPP_MESSAGE = encodeURIComponent(
   'Hello! I would like to know more about PlayMotion Events interactive games for my event.'
 )
 
