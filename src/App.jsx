@@ -9,6 +9,8 @@ import MultiBall from './pages/MultiBall'
 import XWall from './pages/XWall'
 import SoccerTable from './pages/SoccerTable'
 import EventSolutions from './pages/EventSolutions'
+import SportSolutions from './pages/SportSolutions'
+import EducationSolutions from './pages/EducationSolutions'
 import Gallery from './pages/Gallery'
 import Videos from './pages/Videos'
 import Booking from './pages/Booking'
@@ -30,6 +32,8 @@ function App() {
             <Route path="/x-wall" element={<XWall />} />
             <Route path="/soccer-table" element={<SoccerTable />} />
             <Route path="/event-solutions" element={<EventSolutions />} />
+            <Route path="/sport-solutions" element={<SportSolutions />} />
+            <Route path="/education-solutions" element={<EducationSolutions />} />
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/videos" element={<Videos />} />
             <Route path="/booking" element={<Booking />} />
