@@ -6,6 +6,8 @@
 // =====================================================================
 
 import soccerTableImg from '../assets/soccer-table-foosball.jpg'
+import multiballImg from '../assets/multiball-interactive-wall.jpg'
+import xwallImg from '../assets/xwall-portable-wall.jpg'
 
 export const products = [
   {
@@ -14,7 +16,7 @@ export const products = [
         name: 'MultiBall Interactive Sports Wall',
         tagline: 'Throw. Kick. Hit. Compete.',
         color: 'blue',
-        image: 'https://images.unsplash.com/photo-1593642632823-8f785ba67e45?w=800&q=80',
+            image: multiballImg,
         // TODO: Replace image above with a real MultiBall photo/render.
         shortDescription: 'A projector-based interactive sports wall where players throw, kick, hit, and compete through digital games.',
         description: 'MultiBall transforms any flat wall or floor into a full interactive sports arena using projection and motion-tracking technology. Visitors throw, kick, or hit a real ball at the projected wall and instantly see their score, reactions, and mini-games come to life. It is one of the most effective crowd-pulling attractions for exhibition booths and brand activations because it combines physical activity with instant digital feedback.',
@@ -39,7 +41,7 @@ export const products = [
         name: 'X-Wall Portable Interactive Wall',
         tagline: 'Play anywhere, in minutes.',
         color: 'green',
-        image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&q=80',
+            image: xwallImg,
         // TODO: Replace image above with a real X-Wall photo/render.
         shortDescription: 'A portable interactive wall experience with multiple games designed for events, exhibitions, schools, and entertainment spaces.',
         description: 'X-Wall is a lightweight, portable interactive wall system built for teams that move from event to event. It packs down quickly, travels easily, and unfolds into a vibrant interactive games wall that keeps visitors engaged with reaction games, sports challenges, and party modes. Its portability makes it a favorite for roadshows, school events, and multi-day exhibitions.',
