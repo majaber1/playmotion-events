@@ -163,3 +163,14 @@ export const videos = [
         officialLabel: '',
   },
   ]
+
+
+// Experience categories - one shared design/image template, each with its own logo initials, name and description.
+export const experienceCategories = [
+  { id: 1, slug: 'education', name: 'PlayMotion for Education', logo: 'ED', color: 'blue', image: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=80', description: 'Gamified interactive walls that turn classrooms and school events into playful, hands-on learning experiences.' },
+  { id: 2, slug: 'sports', name: 'PlayMotion for Sports', logo: 'SP', color: 'green', image: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=80', description: 'Interactive sports-tech games that bring extra energy to training sessions, sports days, and tournaments.' },
+  { id: 3, slug: 'fitness', name: 'PlayMotion for Fitness', logo: 'FT', color: 'orange', image: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=80', description: 'Turn everyday workouts into engaging, game-based fitness challenges for gyms and wellness studios.' },
+  { id: 4, slug: 'events', name: 'PlayMotion for Events', logo: 'EV', color: 'purple', image: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=80', description: 'Crowd-pulling interactive activations designed for exhibitions, malls, and corporate activations.' },
+  { id: 5, slug: 'museums', name: 'PlayMotion for Museums & Experience Centers', logo: 'MU', color: 'pink', image: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=80', description: 'Immersive interactive displays that bring exhibits and brand stories to life for visitors of all ages.' },
+  { id: 6, slug: 'gaming-zones', name: 'PlayMotion for Gaming Zones', logo: 'GZ', color: 'cyan', image: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=80', description: 'Competitive, high-energy interactive game zones built for entertainment venues and arcades.' },
+]
