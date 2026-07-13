@@ -5,6 +5,7 @@ import WhatsAppButton from './components/WhatsAppButton'
 import Home from './pages/Home'
 import About from './pages/About'
 import Products from './pages/Products'
+import Experience from './pages/Experience'
 import MultiBall from './pages/MultiBall'
 import XWall from './pages/XWall'
 import SoccerTable from './pages/SoccerTable'
@@ -27,6 +28,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/products" element={<Products />} />
+            <Route path="/experience" element={<Experience />} />
             <Route path="/ai-experience-platform" element={<AIExperiencePlatform />} />
             <Route path="/multiball" element={<MultiBall />} />
             <Route path="/x-wall" element={<XWall />} />
