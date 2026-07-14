@@ -8,6 +8,12 @@
 import soccerTableImg from '../assets/soccer-table-foosball.jpg'
 import multiballImg from '../assets/multiball-interactive-wall.jpg'
 import xwallImg from '../assets/xwall-portable-wall.jpg'
+import eduImg from '../assets/experience-education.jpg'
+import sportsImg from '../assets/experience-sports.jpg'
+import fitnessImg from '../assets/experience-fitness.jpg'
+import eventsImg from '../assets/experience-events.jpg'
+import museumsImg from '../assets/experience-museums.jpg'
+import gamingImg from '../assets/experience-gaming-zones.jpg'
 
 export const products = [
   {
@@ -167,10 +173,10 @@ export const videos = [
 
 // Experience categories - one shared design/image template, each with its own logo initials, name and description.
 export const experienceCategories = [
-  { id: 1, slug: 'education', name: 'PlayMotion for Education', logo: 'ED', color: 'blue', image: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=80', description: 'Gamified interactive walls that turn classrooms and school events into playful, hands-on learning experiences.' },
-  { id: 2, slug: 'sports', name: 'PlayMotion for Sports', logo: 'SP', color: 'green', image: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=80', description: 'Interactive sports-tech games that bring extra energy to training sessions, sports days, and tournaments.' },
-  { id: 3, slug: 'fitness', name: 'PlayMotion for Fitness', logo: 'FT', color: 'orange', image: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=80', description: 'Turn everyday workouts into engaging, game-based fitness challenges for gyms and wellness studios.' },
-  { id: 4, slug: 'events', name: 'PlayMotion for Events', logo: 'EV', color: 'purple', image: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=80', description: 'Crowd-pulling interactive activations designed for exhibitions, malls, and corporate activations.' },
-  { id: 5, slug: 'museums', name: 'PlayMotion for Museums & Experience Centers', logo: 'MU', color: 'pink', image: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=80', description: 'Immersive interactive displays that bring exhibits and brand stories to life for visitors of all ages.' },
-  { id: 6, slug: 'gaming-zones', name: 'PlayMotion for Gaming Zones', logo: 'GZ', color: 'cyan', image: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=80', description: 'Competitive, high-energy interactive game zones built for entertainment venues and arcades.' },
+  { id: 1, slug: 'education', name: 'PlayMotion for Education', logo: 'ED', color: 'blue', image: eduImg, description: 'Gamified interactive walls that turn classrooms and school events into playful, hands-on learning experiences.' },
+  { id: 2, slug: 'sports', name: 'PlayMotion for Sports', logo: 'SP', color: 'green', image: sportsImg, description: 'Interactive sports-tech games that bring extra energy to training sessions, sports days, and tournaments.' },
+  { id: 3, slug: 'fitness', name: 'PlayMotion for Fitness', logo: 'FT', color: 'orange', image: fitnessImg, description: 'Turn everyday workouts into engaging, game-based fitness challenges for gyms and wellness studios.' },
+  { id: 4, slug: 'events', name: 'PlayMotion for Events', logo: 'EV', color: 'purple', image: eventsImg, description: 'Crowd-pulling interactive activations designed for exhibitions, malls, and corporate activations.' },
+  { id: 5, slug: 'museums', name: 'PlayMotion for Museums & Experience Centers', logo: 'MU', color: 'pink', image: museumsImg, description: 'Immersive interactive displays that bring exhibits and brand stories to life for visitors of all ages.' },
+  { id: 6, slug: 'gaming-zones', name: 'PlayMotion for Gaming Zones', logo: 'GZ', color: 'cyan', image: gamingImg, description: 'Competitive, high-energy interactive game zones built for entertainment venues and arcades.' },
 ]
