@@ -20,7 +20,7 @@ import AIExperiencePlatform from './pages/AIExperiencePlatform'
 
 function App() {
   return (
-    <Router basename="/playmotion-events">
+    <Router>
       <div className="min-h-screen bg-[#0a0e1a] text-white">
         <Navbar />
         <main>
