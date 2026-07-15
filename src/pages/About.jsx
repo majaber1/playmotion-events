@@ -1,5 +1,22 @@
 import { Link } from 'react-router-dom'
 import SEO from '../components/SEO'
+import { products } from '../data/products'
+
+const trackRecord = [
+  { value: '100+', label: 'Events Delivered', color: 'text-[#00d4ff]' },
+  { value: '20+', label: 'Cities Covered', color: 'text-[#00ff88]' },
+  { value: '50+', label: 'Corporate Clients', color: 'text-[#ff6b00]' },
+  { value: '100%', label: 'Passion For Experience', color: 'text-[#00d4ff]' },
+]
+
+const values = [
+  { icon: '❤️', title: 'Passion', desc: 'We love what we do, and it shows in every activation we run.' },
+  { icon: '💡', title: 'Innovation', desc: 'We stay ahead with the latest projection, sensor, and gaming technology.' },
+  { icon: '🏅', title: 'Quality', desc: 'Every unit, game, and setup is held to a professional, event-ready standard.' },
+  { icon: '🤝', title: 'Teamwork', desc: 'On-site and behind the scenes, we work as one team with our partners.' },
+]
+
+const equippedWith = products.filter((p) => ['multiball', 'x-wall', 'soccer-table'].includes(p.slug))
 
 export default function About() {
   return (
@@ -15,7 +32,7 @@ export default function About() {
         <div className="absolute inset-0 opacity-5" style={{ backgroundImage: 'linear-gradient(rgba(0,212,255,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(0,212,255,0.3) 1px, transparent 1px)', backgroundSize: '60px 60px' }} />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="section-subtitle">Who We Are</div>
-          <h1 className="text-5xl md:text-6xl font-black text-white mb-6">About <span className="text-gradient">PlayMotion Events</span></h1>
+          <h1 className="text-5xl md:text-6xl font-black text-white mb-6">We Bring <span className="text-gradient">Play To Life</span></h1>
           <p className="text-gray-300 text-xl max-w-3xl">A technology partner for interactive gaming experiences, not just an equipment rental company.</p>
         </div>
       </div>
@@ -44,23 +61,20 @@ export default function About() {
           </div>
         </div>
 
-        {/* Fleet Stats */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-20">
-          {[
-            { value: '2', label: 'MultiBall Units', color: 'text-[#00d4ff]' },
-            { value: '2', label: 'X-Wall Units', color: 'text-[#00ff88]' },
-            { value: '2', label: 'Soccer Tables', color: 'text-[#ff6b00]' },
-            { value: 'GCC', label: 'Coverage Area', color: 'text-[#00d4ff]' },
-          ].map((stat) => (
-            <div key={stat.label} className="card-glass rounded-2xl p-6 text-center">
-              <div className={`text-4xl font-black mb-2 ${stat.color}`}>{stat.value}</div>
-              <div className="text-gray-400 text-sm">{stat.label}</div>
-            </div>
-          ))}
+        {/* Track Record */}
+        <div className="mb-20">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            {trackRecord.map((stat) => (
+              <div key={stat.label} className="card-glass rounded-2xl p-6 text-center">
+                <div className={`text-4xl font-black mb-2 ${stat.color}`}>{stat.value}</div>
+                <div className="text-gray-400 text-sm">{stat.label}</div>
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* Mission & Vision */}
-        <div className="grid md:grid-cols-2 gap-8 mb-20">
+        <div className="grid md:grid-cols-2 gap-8 mb-8">
           <div className="card-glass rounded-3xl p-10">
             <div className="inline-block bg-[#00d4ff]/10 border border-[#00d4ff]/30 text-[#00d4ff] text-sm font-bold px-4 py-2 rounded-full mb-6">
               Our Mission
@@ -85,6 +99,23 @@ export default function About() {
           </div>
         </div>
 
+        {/* Our Values */}
+        <div className="card-glass rounded-3xl p-10 mb-20">
+          <div className="text-center mb-10">
+            <div className="section-subtitle">What Drives Us</div>
+            <h2 className="section-title">Our <span className="text-gradient">Values</span></h2>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {values.map((v) => (
+              <div key={v.title} className="text-center">
+                <div className="text-4xl mb-3">{v.icon}</div>
+                <h3 className="text-white font-bold mb-1">{v.title}</h3>
+                <p className="text-gray-400 text-sm">{v.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
         {/* What We Do */}
         <div className="bg-gradient-to-br from-[#0d1221] to-[#0a0e1a] rounded-3xl p-12 mb-20">
           <h2 className="text-3xl font-black text-white mb-10 text-center">What We <span className="text-gradient">Offer</span></h2>
@@ -104,6 +135,34 @@ export default function About() {
               </div>
             ))}
           </div>
+        </div>
+
+        {/* Equipped With */}
+        <div className="mb-20">
+          <div className="text-center mb-10">
+            <div className="section-subtitle">Our Fleet</div>
+            <h2 className="section-title">Equipped <span className="text-gradient">With</span></h2>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+            {equippedWith.map((p) => (
+              <Link key={p.id} to={`/${p.slug}`} className="card-glass rounded-2xl overflow-hidden group block">
+                <div className="overflow-hidden">
+                  <img src={p.image} alt={p.name} className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-white font-bold text-lg mb-1">{p.name}</h3>
+                  <p className="text-gray-400 text-sm">{p.tagline}</p>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+
+        {/* Tagline Banner */}
+        <div className="text-center mb-20">
+          <p className="text-2xl md:text-3xl font-black text-white">
+            Let's create an <span className="text-gradient">experience</span> your guests will never forget.
+          </p>
         </div>
 
         {/* CTA */}
