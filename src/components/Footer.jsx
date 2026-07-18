@@ -1,37 +1,38 @@
 import { Link } from 'react-router-dom'
+import { useLanguage } from '../context/LanguageContext'
 
 // Business contact details for PlayMotion Events.
 const CONTACT = {
-  email: 'info@playmotionevents.sa',
-  phone: '+966 50 123 4567',
+  email: 'info@playmotionevents.sa',  phone: '+966 50 123 4567',
   whatsapp: 'https://wa.me/966501234567',
 }
 
 const footerLinks = {
   quickLinks: [
-    { name: 'Home', path: '/' },
-    { name: 'About Us', path: '/about' },
-    { name: 'Products / Games', path: '/products' },
-    { name: 'Event Solutions', path: '/event-solutions' },
-    { name: 'Gallery', path: '/gallery' },
-    { name: 'Videos', path: '/videos' },
-    { name: 'Reserve a Game', path: '/booking' },
-    { name: 'Contact Us', path: '/contact' },
-  ],
-  experiences: [
-    { name: 'MultiBall Experience', path: '/multiball' },
-    { name: 'X-Wall Experience', path: '/x-wall' },
-    { name: 'Soccer Table / Foosball', path: '/soccer-table' },
-  ],
-  perfectFor: [
-    { name: 'Exhibitions', path: '/event-solutions' },
-    { name: 'Corporate Activations', path: '/event-solutions' },
-    { name: 'Mall Activations', path: '/event-solutions' },
-    { name: 'Schools & Entertainment Zones', path: '/event-solutions' },
-  ],
+    { labelKey: 'nav.home', path: '/' },
+    { labelKey: 'nav.about', path: '/about' },
+    { labelKey: 'nav.products', path: '/products' },
+    { labelKey: 'nav.eventSolutions', path: '/event-solutions' },
+    { labelKey: 'nav.gallery', path: '/gallery' },
+    { labelKey: 'nav.videos', path: '/videos' },
+    { labelKey: 'nav.reserve', path: '/booking' },
+    { labelKey: 'footer.contactUs', path: '/contact' },
+      ],
+    experiences: [
+      { labelKey: 'footer.multiball', path: '/multiball' },
+      { labelKey: 'footer.xwall', path: '/x-wall' },
+      { labelKey: 'footer.soccerTable', path: '/soccer-table' },
+        ],
+    perfectFor: [
+      { labelKey: 'footer.exhibitions', path: '/event-solutions' },
+      { labelKey: 'footer.corporateActivations', path: '/event-solutions' },
+      { labelKey: 'footer.mallActivations', path: '/event-solutions' },
+      { labelKey: 'footer.schoolsEntertainment', path: '/event-solutions' },
+        ],
 }
 
 export default function Footer() {
+    const { t } = useLanguage()
   return (
     <footer className="bg-[#060a12] border-t border-white/5 mt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -48,7 +49,7 @@ export default function Footer() {
               </div>
             </Link>
             <p className="text-gray-400 text-sm leading-relaxed mb-6">
-              PlayMotion Events is an interactive gaming technology partner for exhibitions, corporate activations, malls, schools, and entertainment zones across Saudi Arabia and the GCC.
+              {t('footer.tagline')}
             </p>
             {/* Social Links */}
             <div className="flex gap-3">
@@ -69,16 +70,16 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-white font-bold mb-5 text-sm uppercase tracking-wider">Quick Links</h4>
+            <h4 className="text-white font-bold mb-5 text-sm uppercase tracking-wider">{t('footer.quickLinks')}</h4>
             <ul className="space-y-2">
               {footerLinks.quickLinks.map((link) => (
-                <li key={link.name}>
+                <li key={link.labelKey}>
                   <Link
                     to={link.path}
                     className="text-gray-400 hover:text-[#00d4ff] text-sm transition-colors flex items-center gap-2 group"
                   >
                     <span className="w-1 h-1 rounded-full bg-[#00d4ff]/40 group-hover:bg-[#00d4ff] transition-colors" />
-                    {link.name}
+                    {t(link.labelKey)}
                   </Link>
                 </li>
               ))}
@@ -87,30 +88,30 @@ export default function Footer() {
 
           {/* Experiences + Perfect For */}
           <div>
-            <h4 className="text-white font-bold mb-5 text-sm uppercase tracking-wider">Our Experiences</h4>
+                      <h4 className="text-white font-bold mb-5 text-sm uppercase tracking-wider">{t('footer.ourExperiences')}</</h4>
             <ul className="space-y-2 mb-8">
               {footerLinks.experiences.map((link) => (
-                <li key={link.name}>
+                <li key={link.labelKey}>
                   <Link
                     to={link.path}
                     className="text-gray-400 hover:text-[#00ff88] text-sm transition-colors flex items-center gap-2 group"
                   >
                     <span className="w-1 h-1 rounded-full bg-[#00ff88]/40 group-hover:bg-[#00ff88] transition-colors" />
-                    {link.name}
+                    {t(link.labelKey)}
                   </Link>
                 </li>
               ))}
             </ul>
-            <h4 className="text-white font-bold mb-5 text-sm uppercase tracking-wider">Perfect For</h4>
+            <h4 className="text-white font-bold mb-5 text-sm uppercase tracking-wider"{t('footer.perfectFor')}</h4>
             <ul className="space-y-2">
               {footerLinks.perfectFor.map((link) => (
-                <li key={link.name}>
+                <li key={link.labelKey}>
                   <Link
                     to={link.path}
                     className="text-gray-400 hover:text-[#ff6b00] text-sm transition-colors flex items-center gap-2 group"
                   >
                     <span className="w-1 h-1 rounded-full bg-[#ff6b00]/40 group-hover:bg-[#ff6b00] transition-colors" />
-                    {link.name}
+                    {t(link.labelKey)}
                   </Link>
                 </li>
               ))}
@@ -119,11 +120,11 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className="text-white font-bold mb-5 text-sm uppercase tracking-wider">Contact Us</h4>
+            <h4 className="text-white font-bold mb-5 text-sm uppercase tracking-wider">{t('footer.contactUs')}</h4>
             <div className="space-y-4 mb-6">
               <div className="flex items-start gap-3">
                 <span className="text-[#00d4ff] mt-0.5">📍</span>
-                <p className="text-gray-400 text-sm">Riyadh, Saudi Arabia<br />Available across the GCC</p>
+                <p className="text-gray-400 text-sm">{t('footer.address')}<br />{t('footer.addressSub')}</p>
               </div>
               <div className="flex items-center gap-3">
                 <span className="text-[#00d4ff]">📞</span>
@@ -153,10 +154,10 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="mt-12 pt-8 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-gray-500 text-sm">
-            &copy; {new Date().getFullYear()} PlayMotion Events. All rights reserved.
+            &copy; {new Date().getFullYear()} PlayMotion Events. {t('footer.rights')}
           </p>
           <p className="text-gray-600 text-xs">
-            Interactive Gaming Experiences for Events &amp; Exhibitions
+            {t('footer.subTagline')}
           </p>
         </div>
       </div>
