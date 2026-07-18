@@ -88,7 +88,7 @@ export default function Footer() {
 
           {/* Experiences + Perfect For */}
           <div>
-                      <h4 className="text-white font-bold mb-5 text-sm uppercase tracking-wider">{t('footer.ourExperiences')}</</h4>
+                      <h4 className="text-white font-bold mb-5 text-sm uppercase tracking-wider">{t('footer.ourExperiences')}</h4>
             <ul className="space-y-2 mb-8">
               {footerLinks.experiences.map((link) => (
                 <li key={link.labelKey}>
@@ -102,7 +102,7 @@ export default function Footer() {
                 </li>
               ))}
             </ul>
-            <h4 className="text-white font-bold mb-5 text-sm uppercase tracking-wider"{t('footer.perfectFor')}</h4>
+            <h4 className="text-white font-bold mb-5 text-sm uppercase tracking-wider">{t('footer.perfectFor')}</h4>
             <ul className="space-y-2">
               {footerLinks.perfectFor.map((link) => (
                 <li key={link.labelKey}>
