@@ -1,22 +1,25 @@
 import { useState, useEffect } from 'react'
+import { useLanguage } from '../context/LanguageContext'
+import LanguageSwitcher from './LanguageSwitcher'
 import { Link, NavLink, useLocation } from 'react-router-dom'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 
 const navLinks = [
-  { name: 'Home', path: '/' },
-  { name: 'About Us', path: '/about' },
-  { name: 'Products', path: '/products' },
-  { name: 'Experience', path: '/experience' },
-  { name: 'Event Solutions', path: '/event-solutions' },
-  { name: 'Gallery', path: '/gallery' },
-  { name: 'Videos', path: '/videos' },
-  { name: 'Contact', path: '/contact' },
-]
+  { key: 'home', path: '/' },
+  { key: 'about', path: '/about' },
+  { key: 'products', path: '/products' },
+  { key: 'experience', path: '/experience' },
+  { key: 'eventSolutions', path: '/event-solutions' },
+  { key: 'gallery', path: '/gallery' },
+  { key: 'videos', path: '/videos' },
+  { key: 'contact', path: '/contact' },
+  
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
   const location = useLocation()
+      const { t } = useLanguage()
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20)
@@ -59,8 +62,8 @@ export default function Navbar() {
                   }`
                 }
               >
-                {link.name}
-              </NavLink>
+                {t(`nav.${link.key}`)}
+                      </NavLink>
             ))}
           </div>
 
@@ -70,8 +73,9 @@ export default function Navbar() {
               to="/booking"
               className="hidden md:block btn-primary text-sm py-2 px-5"
             >
-              Reserve a Game
-            </Link>
+              {t('nav.reserve')}
+                    </Link>
+                      <LanguageSwitcher className="hidden md:inline-flex text-sm font-semibold px-3 py-1.5 rounded-full border border-white/20 text-white hover:bg-white/10 transition-colors" />
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="lg:hidden p-2 rounded-lg text-gray-300 hover:text-white hover:bg-white/10 transition-colors"
@@ -98,12 +102,13 @@ export default function Navbar() {
                   }`
                 }
               >
-                {link.name}
-              </NavLink>
+                {t(`nav.${link.key}`)}
+                      </NavLink>
             ))}
             <Link to="/booking" className="block btn-primary text-center mt-4 text-sm py-3">
-              Reserve a Game
-            </Link>
+              {t('nav.reserve')}
+                    </Link>
+                      <LanguageSwitcher className="md:hidden mt-3 w-full text-center text-sm font-semibold px-3 py-2 rounded-lg border border-white/20 text-white hover:bg-white/10 transition-colors" />
           </div>
         </div>
       )}
