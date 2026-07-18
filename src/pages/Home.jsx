@@ -4,8 +4,10 @@ import Hero from '../components/Hero'
 import ProductCard from '../components/ProductCard'
 import GalleryGrid from '../components/GalleryGrid'
 import { products, whyChooseUs, perfectFor, howItWorks } from '../data/products'
+import { useLanguage } from '../context/LanguageContext'
 
 export default function Home() {
+    const { t } = useLanguage()
   return (
     <>
       <SEO
@@ -15,20 +17,20 @@ export default function Home() {
       />
 
       <Hero
-        badge="🎮 Interactive Gaming Technology Partner"
-        title={<>Make Your Booth <span className="text-gradient">the One People Stop At</span></>}
-        description="Interactive projector-based games for exhibitions, corporate events, malls, schools, and entertainment activations."
-        primaryCta={{ label: 'Reserve a Game', href: '/booking' }}
-        secondaryCta={{ label: 'View Experiences', href: '/products' }}
+                badge={t('home.badge')}
+        title={<>{t('home.heroTitle1')} <span className="text-gradient">{t('home.heroTitle2')}</span></>}
+                description={t('home.heroDesc')}
+                primaryCta={{ label: t('home.primaryCta'), href: '/booking' }}
+                secondaryCta={{ label: t('home.secondaryCta'), href: '/products' }}
       />
 
       {/* Intro strip + third CTA */}
       <section className="py-10 border-y border-white/5 bg-[#0d1221]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left">
           <p className="text-gray-300 text-lg">
-            Transform Your Booth Into an Interactive Destination.
+            {t('home.introText')}
           </p>
-          <Link to="/contact" className="btn-secondary whitespace-nowrap">Contact Us</Link>
+          <Link to="/contact" className="btn-secondary whitespace-nowrap">{t('home.contactBtn')}</Link>
         </div>
       </section>
 
@@ -36,8 +38,8 @@ export default function Home() {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
-            <div className="section-subtitle">Our Experiences</div>
-            <h2 className="section-title">Interactive Games for <span className="text-gradient">Every Event</span></h2>
+            <div className="section-subtitle">{t('home.experiencesLabel')}</div>
+            <h2 className="section-title">{t('home.productsTitle1')} <span className="text-gradient">{t('home.productsTitle2')}</span></h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {products.map((p) => (
@@ -51,8 +53,8 @@ export default function Home() {
       <section className="py-20 bg-gradient-to-br from-[#0d1221] to-[#0a0e1a]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
-            <div className="section-subtitle">Why Us</div>
-            <h2 className="section-title">Why Event Organizers <span className="text-gradient">Choose Us</span></h2>
+            <div className="section-subtitle">{t('home.whyLabel')}</div>
+            <h2 className="section-title">{t('home.whyTitle1')} <span className="text-gradient">{t('home.whyTitle2')}</span></h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {whyChooseUs.map((item) => (
@@ -109,12 +111,12 @@ export default function Home() {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
-            <div className="section-subtitle">Gallery</div>
-            <h2 className="section-title">See Us <span className="text-gradient">In Action</span></h2>
+            <div className="section-subtitle">{t('home.galleryLabel')}</div>
+            <h2 className="section-title">{t('home.galleryTitle1')} <span className="text-gradient">{t('home.galleryTitle2')}</span></h2>
           </div>
           <GalleryGrid limit={8} />
           <div className="text-center mt-10">
-            <Link to="/gallery" className="btn-primary text-lg py-4 px-12">View Full Gallery</Link>
+            <Link to="/gallery" className="btn-primary text-lg py-4 px-12">{t('home.viewFullGallery')}</Link>
           </div>
         </div>
       </section>
@@ -122,12 +124,12 @@ export default function Home() {
       {/* Contact CTA */}
       <section className="py-24 bg-gradient-to-br from-[#0d1221] to-[#0a0e1a]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="section-subtitle">Get Started</div>
-          <h2 className="section-title mb-6">Make Your Next Event <span className="text-gradient">Unforgettable</span></h2>
-          <p className="text-gray-300 text-lg mb-10">Contact us today to reserve MultiBall, X-Wall, Soccer Table, or a full interactive package.</p>
+          <div className="section-subtitle">{t('home.getStartedLabel')}</div>
+          <h2 className="section-title mb-6">{t('home.ctaTitle1')} <span className="text-gradient">{t('home.ctaTitle2')}</span></h2>
+                  <p className="text-gray-300 text-lg mb-10">{t('home.ctaDesc')}</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/booking" className="btn-primary text-lg py-4 px-12">Reserve a Game</Link>
-            <Link to="/contact" className="btn-secondary text-lg py-4 px-12">Contact Us</Link>
+            <Link to="/booking" className="btn-primary text-lg py-4 px-12">{t('home.primaryCta')}>
+            <Link to="/contact" className="btn-secondary text-lg py-4 px-12">{t('home.contactBtn')}>
           </div>
         </div>
       </section>
