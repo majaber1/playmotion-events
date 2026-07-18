@@ -75,8 +75,8 @@ export default function Navbar() {
             >
               {t('nav.reserve')}
                     </Link>
-                      <LanguageSwitcher className="hidden md:inline-flex text-sm font-semibold px-3 py-1.5 rounded-full border border-white/20 text-white hover:bg-white/10 transition-colors" />
-            <button
+<LanguageSwitcher className="hidden md:block btn-secondary text-sm py-2 px-5" />
+                        <button
               onClick={() => setIsOpen(!isOpen)}
               className="lg:hidden p-2 rounded-lg text-gray-300 hover:text-white hover:bg-white/10 transition-colors"
             >
@@ -108,7 +108,7 @@ export default function Navbar() {
             <Link to="/booking" className="block btn-primary text-center mt-4 text-sm py-3">
               {t('nav.reserve')}
                     </Link>
-                      <LanguageSwitcher className="md:hidden mt-3 w-full text-center text-sm font-semibold px-3 py-2 rounded-lg border border-white/20 text-white hover:bg-white/10 transition-colors" />
+                      <LanguageSwitcher className="block btn-secondary text-center mt-4 text-sm py-3" />
           </div>
         </div>
       )}
