@@ -13,6 +13,7 @@ const navLinks = [
   { key: 'gallery', path: '/gallery' },
   { key: 'videos', path: '/videos' },
   { key: 'contact', path: '/contact' },
+  ]
   
 
 export default function Navbar() {
