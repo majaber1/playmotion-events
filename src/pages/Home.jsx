@@ -128,8 +128,8 @@ export default function Home() {
           <h2 className="section-title mb-6">{t('home.ctaTitle1')} <span className="text-gradient">{t('home.ctaTitle2')}</span></h2>
                   <p className="text-gray-300 text-lg mb-10">{t('home.ctaDesc')}</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/booking" className="btn-primary text-lg py-4 px-12">{t('home.primaryCta')}>
-            <Link to="/contact" className="btn-secondary text-lg py-4 px-12">{t('home.contactBtn')}>
+            <Link to="/booking" className="btn-primary text-lg py-4 px-12">{t('home.primaryCta')}</Link>
+            <Link to="/contact" className="btn-secondary text-lg py-4 px-12">{t('home.contactBtn')}</Link>
           </div>
         </div>
       </section>
