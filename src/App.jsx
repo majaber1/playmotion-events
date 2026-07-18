@@ -16,7 +16,6 @@ import Gallery from './pages/Gallery'
 import Videos from './pages/Videos'
 import Booking from './pages/Booking'
 import Contact from './pages/Contact'
-import AIExperiencePlatform from './pages/AIExperiencePlatform'
 
 function App() {
   return (
@@ -29,7 +28,6 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/products" element={<Products />} />
             <Route path="/experience" element={<Experience />} />
-            <Route path="/ai-experience-platform" element={<AIExperiencePlatform />} />
             <Route path="/multiball" element={<MultiBall />} />
             <Route path="/x-wall" element={<XWall />} />
             <Route path="/soccer-table" element={<SoccerTable />} />
