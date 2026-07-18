@@ -7,7 +7,6 @@ const navLinks = [
   { name: 'About Us', path: '/about' },
   { name: 'Products', path: '/products' },
   { name: 'Experience', path: '/experience' },
-  { name: 'AI Experience Platform', path: '/ai-experience-platform' },
   { name: 'Event Solutions', path: '/event-solutions' },
   { name: 'Gallery', path: '/gallery' },
   { name: 'Videos', path: '/videos' },
