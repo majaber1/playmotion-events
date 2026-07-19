@@ -120,15 +120,15 @@ export const howItWorks = [
 // Gallery images - real event photos.
 // See README.md > "How to add images" for instructions.
 export const galleryImages = [
-  { id: 1, src: '/images/gallery-multiball.jpg', alt: 'MultiBall interactive wall setup', category: 'MultiBall Setup' },
-  { id: 2, src: '/images/gallery-multiball.jpg', alt: 'MultiBall wall at an exhibition', category: 'MultiBall Setup' },
+  { id: 1, src: '/images/gallery-multiball-1.jpg', alt: 'MultiBall interactive wall setup', category: 'MultiBall Setup' },
+  { id: 2, src: '/images/gallery-multiball-2.jpg', alt: 'MultiBall wall at an exhibition', category: 'MultiBall Setup' },
   { id: 3, src: '/images/gallery-xwall.jpg', alt: 'X-Wall portable interactive wall', category: 'X-Wall Setup' },
-  { id: 4, src: '/images/gallery-xwall.jpg', alt: 'X-Wall game in action', category: 'X-Wall Setup' },
-  { id: 7, src: '/images/gallery-kids-playing.jpg', alt: 'Kids playing an interactive game', category: 'Kids Playing' },
-  { id: 8, src: '/images/gallery-kids-playing.jpg', alt: 'Children enjoying a game zone', category: 'Kids Playing' },
-  { id: 11, src: 'https://images.unsplash.com/photo-1544441893-675973e31985?w=700&q=80', alt: 'Soccer table competition', category: 'Soccer Table Competition' },
-  { id: 12, src: 'https://images.unsplash.com/photo-1517649763962-0c623066013b?w=700&q=80', alt: 'Guests playing foosball at an event', category: 'Soccer Table Competition' },
-  ]
+  { id: 4, src: '/images/gallery-xwall-2.jpg', alt: 'X-Wall game in action', category: 'X-Wall Setup' },
+  { id: 7, src: '/images/gallery-kids-1.jpg', alt: 'Kids playing an interactive game', category: 'Kids Playing' },
+  { id: 8, src: '/images/gallery-kids-2.jpg', alt: 'Children enjoying a game zone', category: 'Kids Playing' },
+  { id: 11, src: '/images/gallery-soccer-1.jpg', alt: 'Soccer table competition', category: 'Soccer Table Competition' },
+  { id: 12, src: '/images/gallery-soccer-2.jpg', alt: 'Guests playing foosball at an event', category: 'Soccer Table Competition' },
+]
 
 // Video placeholders - add a real YouTube embed ID to enable the embed.
 // Until then, the card links out to the official channel/page.
