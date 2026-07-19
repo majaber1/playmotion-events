@@ -176,3 +176,12 @@ export const experienceCategories = [
   { id: 5, slug: 'museums', name: 'PlayMotion for Museums & Experience Centers', logo: 'MU', color: 'pink', image: museumsImg, description: 'Immersive interactive displays that bring exhibits and brand stories to life for visitors of all ages.' },
   { id: 6, slug: 'gaming-zones', name: 'PlayMotion for Gaming Zones', logo: 'GZ', color: 'cyan', image: gamingImg, description: 'Competitive, high-energy interactive game zones built for entertainment venues and arcades.' },
 ]
+
+
+// Gallery highlight photos - real event photo collages showcasing each experience live.
+export const galleryHighlights = [
+  { id: 1, src: '/images/gallery-highlight-1.jpg', alt: 'MultiBall and Soccer Table gameplay highlights at live events', caption: 'Game Highlights' },
+  { id: 2, src: '/images/gallery-highlight-2.jpg', alt: 'PlayMotion brand experience overview - About, Mission, Sport, Fitness and Education', caption: 'Our Experience' },
+  { id: 3, src: '/images/gallery-highlight-3.jpg', alt: 'MultiBall, X-Wall, Soccer Table, Event, Education and Fitness experience photos', caption: 'Live At Our Events' },
+  { id: 4, src: '/images/gallery-highlight-4.jpg', alt: 'Guests playing MultiBall, X-Wall and Soccer Table at events', caption: 'More Moments' },
+  ]
