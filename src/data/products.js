@@ -17,76 +17,76 @@ import gamingImg from '../assets/experience-gaming-zones.jpg'
 
 export const products = [
   {
-        id: 1,
-        slug: 'multiball',
-        name: 'MultiBall Interactive Sports Wall',
-        tagline: 'Throw. Kick. Hit. Compete.',
-        color: 'blue',
-            image: multiballImg,
-        // TODO: Replace image above with a real MultiBall photo/render.
-        shortDescription: 'A projector-based interactive sports wall where players throw, kick, hit, and compete through digital games.',
-        description: 'MultiBall transforms any flat wall or floor into a full interactive sports arena using projection and motion-tracking technology. Visitors throw, kick, or hit a real ball at the projected wall and instantly see their score, reactions, and mini-games come to life. It is one of the most effective crowd-pulling attractions for exhibition booths and brand activations because it combines physical activity with instant digital feedback.',
-        bestFor: 'Exhibitions, corporate booths, malls, sports days',
-        spaceRequirement: '3m x 3m wall or floor area, indoor or shaded outdoor',
-        setupTime: '30-45 minutes',
-        players: '1-4 players per round',
-        features: [
-                'Multiple built-in sports and party game modes',
-                'Real-time scoring and leaderboards on screen',
-                'Works with real balls - football, handball, and more',
-                'Custom branding and logo overlays for sponsors',
-              ],
-        officialLink: 'https://multi-ball.com',
-        officialLabel: 'multi-ball.com',
-        videoChannel: 'https://www.youtube.com/@MultiBall',
-        featured: true,
+    id: 1,
+    slug: 'multiball',
+    name: 'MultiBall Interactive Sports Wall',
+    tagline: 'Throw. Kick. Hit. Compete.',
+    color: 'blue',
+    image: multiballImg,
+    // TODO: Replace image above with a real MultiBall photo/render.
+    shortDescription: 'A projector-based interactive sports wall where players throw, kick, hit, and compete through digital games.',
+    description: 'MultiBall transforms any flat wall or floor into a full interactive sports arena using projection and motion-tracking technology. Visitors throw, kick, or hit a real ball at the projected wall and instantly see their score, reactions, and mini-games come to life. It is one of the most effective crowd-pulling attractions for exhibition booths and brand activations because it combines physical activity with instant digital feedback.',
+    bestFor: 'Exhibitions, corporate booths, malls, sports days',
+    spaceRequirement: '3m x 3m wall or floor area, indoor or shaded outdoor',
+    setupTime: '30-45 minutes',
+    players: '1-4 players per round',
+    features: [
+      'Multiple built-in sports and party game modes',
+      'Real-time scoring and leaderboards on screen',
+      'Works with real balls - football, handball, and more',
+      'Custom branding and logo overlays for sponsors',
+      ],
+    officialLink: 'https://multi-ball.com',
+    officialLabel: 'multi-ball.com',
+    videoChannel: 'https://www.youtube.com/@MultiBall',
+    featured: true,
   },
   {
-        id: 2,
-        slug: 'x-wall',
-        name: 'X-Wall Portable Interactive Wall',
-        tagline: 'Play anywhere, in minutes.',
-        color: 'green',
-            image: xwallImg,
-        // TODO: Replace image above with a real X-Wall photo/render.
-        shortDescription: 'A portable interactive wall experience with multiple games designed for events, exhibitions, schools, and entertainment spaces.',
-        description: 'X-Wall is a lightweight, portable interactive wall system built for teams that move from event to event. It packs down quickly, travels easily, and unfolds into a vibrant interactive games wall that keeps visitors engaged with reaction games, sports challenges, and party modes. Its portability makes it a favorite for roadshows, school events, and multi-day exhibitions.',
-        bestFor: 'Exhibitions, schools, entertainment zones, mall activations',
-        spaceRequirement: 'Portable wall, 2.5m x 2.5m footprint',
-        setupTime: '20-30 minutes (portable design)',
-        players: '1-2 players per round',
-        features: [
-                'Fully portable, tool-free setup and breakdown',
-                'Library of reaction, sports, and party games',
-                'Bright, durable surface built for high foot traffic',
-                'Ideal for touring activations and multi-city events',
-              ],
-        officialLink: 'https://xwall.io',
-        officialLabel: 'xwall.io',
-        eventsLink: 'https://xwall.io/en/xwall-event',
-        videoChannel: 'https://interactivexwall.nl/en',
-        featured: true,
+    id: 2,
+    slug: 'x-wall',
+    name: 'X-Wall Portable Interactive Wall',
+    tagline: 'Play anywhere, in minutes.',
+    color: 'green',
+    image: xwallImg,
+    // TODO: Replace image above with a real X-Wall photo/render.
+    shortDescription: 'A portable interactive wall experience with multiple games designed for events, exhibitions, schools, and entertainment spaces.',
+    description: 'X-Wall is a lightweight, portable interactive wall system built for teams that move from event to event. It packs down quickly, travels easily, and unfolds into a vibrant interactive games wall that keeps visitors engaged with reaction games, sports challenges, and party modes. Its portability makes it a favorite for roadshows, school events, and multi-day exhibitions.',
+    bestFor: 'Exhibitions, schools, entertainment zones, mall activations',
+    spaceRequirement: 'Portable wall, 2.5m x 2.5m footprint',
+    setupTime: '20-30 minutes (portable design)',
+    players: '1-2 players per round',
+    features: [
+      'Fully portable, tool-free setup and breakdown',
+      'Library of reaction, sports, and party games',
+      'Bright, durable surface built for high foot traffic',
+      'Ideal for touring activations and multi-city events',
+      ],
+    officialLink: 'https://xwall.io',
+    officialLabel: 'xwall.io',
+    eventsLink: 'https://xwall.io/en/xwall-event',
+    videoChannel: 'https://interactivexwall.nl/en',
+    featured: true,
   },
   {
-        id: 3,
-        slug: 'soccer-table',
-        name: 'Soccer Table / Foosball Challenge',
-        tagline: 'The classic crowd favorite.',
-        color: 'orange',
-        image: soccerTableImg,
-        shortDescription: 'A classic competitive table game for booths, lounges, tournaments, and casual event engagement.',
-        description: 'Our professional soccer tables bring a familiar, universally loved game to your event floor. Easy to understand and instantly fun, foosball tables are perfect for creating friendly competition in lounges, break areas, and booths - and they pair perfectly with mini-tournaments and prize giveaways to keep visitors coming back throughout the day.',
-        bestFor: 'Booths, lounges, tournaments, corporate breakout areas',
-        spaceRequirement: '1.5m x 0.8m per table, plus 1m player clearance on each side',
-        setupTime: '10-15 minutes',
-        players: '2-4 players per match',
-        features: [
-                'Tournament-ready professional tables',
-                'Simple rules - instantly playable by all ages',
-                'Great for scheduled mini-tournaments with prizes',
-                'Compact footprint, easy to place in any booth layout',
-              ],
-        featured: true,
+    id: 3,
+    slug: 'soccer-table',
+    name: 'Soccer Table / Foosball Challenge',
+    tagline: 'The classic crowd favorite.',
+    color: 'orange',
+    image: soccerTableImg,
+    shortDescription: 'A classic competitive table game for booths, lounges, tournaments, and casual event engagement.',
+    description: 'Our professional soccer tables bring a familiar, universally loved game to your event floor. Easy to understand and instantly fun, foosball tables are perfect for creating friendly competition in lounges, break areas, and booths - and they pair perfectly with mini-tournaments and prize giveaways to keep visitors coming back throughout the day.',
+    bestFor: 'Booths, lounges, tournaments, corporate breakout areas',
+    spaceRequirement: '1.5m x 0.8m per table, plus 1m player clearance on each side',
+    setupTime: '10-15 minutes',
+    players: '2-4 players per match',
+    features: [
+      'Tournament-ready professional tables',
+      'Simple rules - instantly playable by all ages',
+      'Great for scheduled mini-tournaments with prizes',
+      'Compact footprint, easy to place in any booth layout',
+      ],
+    featured: true,
   },
   ]
 
@@ -117,19 +117,15 @@ export const howItWorks = [
   { step: 4, title: 'Guests Play and Engage', desc: 'Visitors enjoy an interactive experience that keeps them at your booth longer.' },
   ]
 
-// Gallery placeholder images - replace src with real event photos.
+// Gallery images - real event photos.
 // See README.md > "How to add images" for instructions.
 export const galleryImages = [
-  { id: 1, src: 'https://images.unsplash.com/photo-1593642632823-8f785ba67e45?w=700&q=80', alt: 'MultiBall interactive wall setup', category: 'MultiBall Setup' },
-  { id: 2, src: 'https://images.unsplash.com/photo-1552674605-db6ffd4facb5?w=700&q=80', alt: 'MultiBall wall at an exhibition', category: 'MultiBall Setup' },
-  { id: 3, src: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=700&q=80', alt: 'X-Wall portable interactive wall', category: 'X-Wall Setup' },
-  { id: 4, src: 'https://images.unsplash.com/photo-1511512578047-dfb367046420?w=700&q=80', alt: 'X-Wall game in action', category: 'X-Wall Setup' },
-  { id: 5, src: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=700&q=80', alt: 'Branded event booth activation', category: 'Event Booth Activation' },
-  { id: 6, src: 'https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?w=700&q=80', alt: 'Exhibition booth with visitors', category: 'Event Booth Activation' },
-  { id: 7, src: 'https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=700&q=80', alt: 'Kids playing an interactive game', category: 'Kids Playing' },
-  { id: 8, src: 'https://images.unsplash.com/photo-1560421683-6856ea585c78?w=700&q=80', alt: 'Children enjoying a game zone', category: 'Kids Playing' },
-  { id: 9, src: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=700&q=80', alt: 'Corporate team challenge', category: 'Corporate Team Challenge' },
-  { id: 10, src: 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=700&q=80', alt: 'Corporate employees competing at an event', category: 'Corporate Team Challenge' },
+  { id: 1, src: '/images/gallery-multiball.jpg', alt: 'MultiBall interactive wall setup', category: 'MultiBall Setup' },
+  { id: 2, src: '/images/gallery-multiball.jpg', alt: 'MultiBall wall at an exhibition', category: 'MultiBall Setup' },
+  { id: 3, src: '/images/gallery-xwall.jpg', alt: 'X-Wall portable interactive wall', category: 'X-Wall Setup' },
+  { id: 4, src: '/images/gallery-xwall.jpg', alt: 'X-Wall game in action', category: 'X-Wall Setup' },
+  { id: 7, src: '/images/gallery-kids-playing.jpg', alt: 'Kids playing an interactive game', category: 'Kids Playing' },
+  { id: 8, src: '/images/gallery-kids-playing.jpg', alt: 'Children enjoying a game zone', category: 'Kids Playing' },
   { id: 11, src: 'https://images.unsplash.com/photo-1544441893-675973e31985?w=700&q=80', alt: 'Soccer table competition', category: 'Soccer Table Competition' },
   { id: 12, src: 'https://images.unsplash.com/photo-1517649763962-0c623066013b?w=700&q=80', alt: 'Guests playing foosball at an event', category: 'Soccer Table Competition' },
   ]
@@ -138,34 +134,33 @@ export const galleryImages = [
 // Until then, the card links out to the official channel/page.
 export const videos = [
   {
-        id: 1,
-        title: 'MultiBall Demo Video',
-        category: 'MultiBall',
-        description: 'See MultiBall in action - projection-based sports games for events and exhibitions.',
-        embedId: 'WznovG2Yylw', // MultiBall 2026: The Next Generation of Interactive Sports (official MultiBall YouTube channel)
-        officialUrl: 'https://www.youtube.com/@MultiBall',
-        officialLabel: 'Watch on the official MultiBall YouTube channel',
+    id: 1,
+    title: 'MultiBall Demo Video',
+    category: 'MultiBall',
+    description: 'See MultiBall in action - projection-based sports games for events and exhibitions.',
+    embedId: 'WznovG2Yylw', // MultiBall 2026: The Next Generation of Interactive Sports (official MultiBall YouTube channel)
+    officialUrl: 'https://www.youtube.com/@MultiBall',
+    officialLabel: 'Watch on the official MultiBall YouTube channel',
   },
   {
-        id: 2,
-        title: 'X-Wall Demo Video',
-        category: 'X-Wall',
-        description: 'A walkthrough of the portable X-Wall interactive game system.',
-        embedId: 'aMkHnW3W8tU', // X-Wall Portable in care: movement through play (official Interactive X-Wall YouTube channel)
-        officialUrl: 'https://xwall.io/en/xwall-event',
-        officialLabel: 'View X-Wall event examples',
+    id: 2,
+    title: 'X-Wall Demo Video',
+    category: 'X-Wall',
+    description: 'A walkthrough of the portable X-Wall interactive game system.',
+    embedId: 'aMkHnW3W8tU', // X-Wall Portable in care: movement through play (official Interactive X-Wall YouTube channel)
+    officialUrl: 'https://xwall.io/en/xwall-event',
+    officialLabel: 'View X-Wall event examples',
   },
   {
-        id: 3,
-        title: 'Event Activation Highlights',
-        category: 'Events',
-        description: 'Highlights from PlayMotion Events activations - add your own event recap video here.',
-        embedId: '', // TODO: paste your own event highlight reel YouTube video ID here
-        officialUrl: '',
-        officialLabel: '',
+    id: 3,
+    title: 'Event Activation Highlights',
+    category: 'Events',
+    description: 'Highlights from PlayMotion Events activations - add your own event recap video here.',
+    embedId: '', // TODO: paste your own event highlight reel YouTube video ID here
+    officialUrl: '',
+    officialLabel: '',
   },
   ]
-
 
 // Experience categories - one shared design/image template, each with its own logo initials, name and description.
 export const experienceCategories = [
@@ -175,8 +170,7 @@ export const experienceCategories = [
   { id: 4, slug: 'events', name: 'PlayMotion for Events', logo: 'EV', color: 'purple', image: eventsImg, description: 'Crowd-pulling interactive activations designed for exhibitions, malls, and corporate activations.' },
   { id: 5, slug: 'museums', name: 'PlayMotion for Museums & Experience Centers', logo: 'MU', color: 'pink', image: museumsImg, description: 'Immersive interactive displays that bring exhibits and brand stories to life for visitors of all ages.' },
   { id: 6, slug: 'gaming-zones', name: 'PlayMotion for Gaming Zones', logo: 'GZ', color: 'cyan', image: gamingImg, description: 'Competitive, high-energy interactive game zones built for entertainment venues and arcades.' },
-]
-
+  ]
 
 // Gallery highlight photos - real event photo collages showcasing each experience live.
 export const galleryHighlights = [
