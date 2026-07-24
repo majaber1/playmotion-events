@@ -53,11 +53,8 @@ export default function About() {
               We don't just deliver equipment - we deliver a complete experience, including transport, setup, on-site operation, and takedown, so your team can focus entirely on your event and your guests.
             </p>
           </div>
-          <div className="grid grid-cols-2 gap-4">
-            <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=400&q=80" alt="Corporate event activation" className="rounded-2xl w-full h-48 object-cover" />
-            <img src="https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?w=400&q=80" alt="Exhibition booth" className="rounded-2xl w-full h-48 object-cover mt-8" />
-            <img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=400&q=80" alt="Kids playing an interactive game" className="rounded-2xl w-full h-48 object-cover" />
-            <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&q=80" alt="Corporate team challenge" className="rounded-2xl w-full h-48 object-cover mt-8" />
+                    <div>
+            <img src="/images/about-interactive-sport-events.jpg" alt="PlayMotion Events interactive sport experiences" className="rounded-2xl w-full h-full object-cover shadow-2xl" />
           </div>
         </div>
 
